@@ -16,3 +16,9 @@ end
   Food.create(name: Faker::Food.ingredient, measurement_unit: Faker::Food.metric_measurement, price: rand(1..27), quantity: rand(1..9), user_id: rand(1..9))
   Food.create(name: Faker::Food.vegetables, measurement_unit: Faker::Food.metric_measurement, price: rand(1..27), quantity: rand(1..9), user_id: rand(1..9))
 end
+
+9.times do
+  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
+  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
+  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
+end
