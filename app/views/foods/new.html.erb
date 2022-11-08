@@ -1,27 +1,9 @@
-<%= form_with model: @food, url: user_foods_path(params[:user_id]) do |form| %>
+<h1>New Food</h1>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+<%= render "form", user: @food %>
 
-  <div>
-    <%= form.label :measurement_unit, style: "display: block" %>
-    <%= form.text_field :measurement_unit %>
-  </div>
+<br>
 
-  <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-  <%= link_to "Back to foods", user_foods_path(params[:user_id]) %>
+<div>
+  <%= link_to "Back to Foods", user_foods_path %>
+</div>

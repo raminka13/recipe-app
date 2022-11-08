@@ -1,20 +1,19 @@
 class FoodsController < ApplicationController
+  before_action :get_user
   before_action :set_food, only: %i[show edit update destroy]
 
   # GET /foods or /foods.json
   def index
-    @user = User.includes(:foods).find(params[:user_id])
-    @foods = Food.where(user_id: @user.id).order(created_at: :desc)
+    @foods = @user.foods
   end
 
   # GET /foods/1 or /foods/1.json
   def show
-    @user = User.includes(:foods).find(params[:user_id])
   end
 
   # GET /foods/new
   def new
-    @food = Food.new
+    @food = @user.foods.build
   end
 
   # GET /foods/1/edit
@@ -24,12 +23,11 @@ class FoodsController < ApplicationController
 
   # POST /foods or /foods.json
   def create
-    @food = Food.new(food_params)
-    @food.user_id = params[:user_id]
+    @food = @user.foods.build(food_params)
 
     respond_to do |format|
       if @food.save
-        format.html { redirect_to user_food_path(params[:user_id], @food), notice: 'Food was successfully created.' }
+        format.html { redirect_to user_foods_path(@user), notice: 'Food was successfully created.' }
         format.json { render :show, status: :created, location: @food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +40,7 @@ class FoodsController < ApplicationController
   def update
     respond_to do |format|
       if @food.update(food_params)
-        format.html { redirect_to user_food_path(params[:user_id]), notice: 'Food was successfully updated.' }
+        format.html { redirect_to user_food_path(@user), notice: 'Food was successfully updated.' }
         format.json { render :show, status: :ok, location: @food }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -56,16 +54,18 @@ class FoodsController < ApplicationController
     @food.destroy
 
     respond_to do |format|
-      format.html { redirect_to user_foods_url, notice: 'Food was successfully destroyed.' }
+      format.html { redirect_to user_foods_path(@user), notice: 'Food was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-
+  def get_user
+    @user = User.find(params[:user_id])
+  end
   # Use callbacks to share common setup or constraints between actions.
   def set_food
-    @food = Food.find(params[:id])
+    @food = @user.foods.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.

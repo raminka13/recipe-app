@@ -3,7 +3,7 @@
 <h1>Foods</h1>
 
 <%= @user.name %>
-<%= @user.id %>
+
 
 <div id="foods">
   <% @foods.each do |food| %>
@@ -14,5 +14,6 @@
   <% end %>
 </div>
 
-<%= link_to "New Food", new_user_food_path %>
+<%= link_to "New Food", new_user_food_path %> <br>
+<%= link_to "Back to User", user_path(@user) %>
 
