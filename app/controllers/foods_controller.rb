@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  before_action :get_user
+  before_action :obtain_user
   before_action :set_food, only: %i[show edit update destroy]
 
   # GET /foods or /foods.json
@@ -8,8 +8,7 @@ class FoodsController < ApplicationController
   end
 
   # GET /foods/1 or /foods/1.json
-  def show
-  end
+  def show; end
 
   # GET /foods/new
   def new
@@ -60,9 +59,11 @@ class FoodsController < ApplicationController
   end
 
   private
-  def get_user
+
+  def obtain_user
     @user = User.find(params[:user_id])
   end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_food
     @food = @user.foods.find(params[:id])
