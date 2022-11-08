@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes
   resources :users do
     resources :foods
   end
