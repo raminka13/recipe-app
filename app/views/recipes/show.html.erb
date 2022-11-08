@@ -2,7 +2,16 @@
 
 <%= render @recipe %>
 
-<%= render 'ingredients' %>
+  <table>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+      <%= render @recipe_foods %>
+  </table>
+
 
 <div>
   <%= link_to "Edit this recipe", edit_user_recipe_path(@user, @recipe) %> |
