@@ -3,11 +3,12 @@
 <h1>Users</h1>
 
 <div id="users">
-  <%= render @users %>
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
 </div>
-
-<%= link_to "Show Recipes", recipes_path %>
-
-<%= link_to "Show Foods", foods_path %>
 
 <%= link_to "New user", new_user_path %>
