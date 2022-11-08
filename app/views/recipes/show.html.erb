@@ -2,6 +2,8 @@
 
 <%= render @recipe %>
 
+<%= link_to "New ingredient", new_user_recipe_recipe_food_path(@user, @recipe) %>
+
   <table>
     <tr>
       <th>Food</th>
