@@ -1,7 +1,11 @@
 <div id="<%= dom_id user %>">
   <p>
     <strong>Name:</strong>
-    <%= user.name %>
+    <%= user.name %> <br>
+    <strong>ID:</strong>
+    <%= user.id %> <br>
+    <strong>Foods:</strong>
+    <%= user.foods.count %>.
   </p>
-
+  <%= link_to 'Foods', user_foods_path(user) %>
 </div>
