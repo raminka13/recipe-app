@@ -1,12 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Public Recipes</h1>
+<%= link_to "Public Recipes", public_recipes_path %>
 
+<h1>Users</h1>
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
     <p>
-      <%= link_to "Show this user", user %>
+      <%= link_to "Open User", user %>
     </p>
   <% end %>
 </div>
