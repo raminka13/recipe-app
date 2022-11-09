@@ -1,0 +1,40 @@
+<nav id="navbar">
+  <div id="nav-container">
+    <a class="navbar-brand" href="/"><img src=<%= asset_path('book.png') %> alt="RecipeApp">
+    <h2>RecipeApp</h2>
+    </a>
+    <div id="navbar-body">
+      <ul class="navbar-list">
+        <li class="nav-item">
+          <%= link_to 'Home', root_path, class: 'nav-link' %>
+        </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%=link_to "New Recipe", new_user_recipe_path(current_user) %>
+        </li>
+        <li class="nav-item">
+          <%=link_to "My Recipes", user_recipes_path(current_user) %>
+        </li>
+        <li class="nav-item">
+          <%=link_to "My Foods", user_foods_path(current_user) %>
+        </li>
+        <li class="nav-item">
+          <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) %>
+        </li>
+        <li class="nav-item">
+          <%= link_to edit_user_registration_path, class: 'nav-link' do %>
+          <p class="logged-user">Log as<br><strong><%= current_user.name %></strong></p>
+          <% end %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Log In', new_user_session_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -8,9 +8,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+        <%= favicon_link_tag asset_path('recipe.png') %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: 'layouts/navbar' %>
+    <main>
+      <h3 class="notice"><%= notice %></h3>
+      <h3 class="alert"><%= alert %></h3>
+      <%= yield %>
+    </main>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>
