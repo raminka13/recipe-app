@@ -30,7 +30,7 @@ main {
 
 .container {
   display: flex;
-  min-height: 80vh;
+  min-height: calc(100vh - 138px);
   justify-content: center;
   align-items: flex-start;
   width: 80%;
