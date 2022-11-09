@@ -8,6 +8,7 @@
 <% end %>
 <br>
 
+<%= link_to "Generate List", user_recipe_shopping_list_index_path(@user, @recipe) %>
 <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe) %>
 
   <table>

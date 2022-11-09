@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :food_id, style: "display: block" %>
-    <%= collection_select(:recipe_food, :food_id, Food.all.order( 'name ASC' ), :id, :name) %>
+    <%= collection_select(:recipe_food, :food_id, @user.foods.order( 'name ASC' ), :id, :name) %>
   </div>
 
   <br>
