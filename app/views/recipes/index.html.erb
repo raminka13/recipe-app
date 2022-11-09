@@ -6,8 +6,9 @@
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
-      <%= link_to "Show this recipe", user_recipe_path(@user, recipe) %>
+      <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
     </p>
+    <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
   <% end %>
 </div>
 

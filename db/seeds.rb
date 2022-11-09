@@ -22,3 +22,9 @@ end
   Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
   Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
 end
+
+9.times do
+  RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
+  RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
+  RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
+end
