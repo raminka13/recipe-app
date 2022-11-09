@@ -2,8 +2,10 @@
 
 <%= render @recipe %>
 
-<%= button_to "Update TRUE/FALSE", user_recipe_recipe_food_path(@user, @recipe.toggle!(:public)), method: :patch %>
-
+<%= form_with(model: [@user, @recipe]) do |form| %>
+  <%= form.hidden_field :public, value: !@recipe.public %>
+  <%= form.submit 'Public?' %>
+<% end %>
 <br>
 
 <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe) %>
