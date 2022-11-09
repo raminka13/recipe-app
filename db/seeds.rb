@@ -5,26 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require 'faker'
 
-9.times do |user|
-  User.create(name: Faker::Name.name)
-end
-
-9.times do
-  Food.create(name: Faker::Food.fruits, measurement_unit: Faker::Food.metric_measurement, price: rand(1..27), quantity: rand(1..9), user_id: rand(1..9))
-  Food.create(name: Faker::Food.ingredient, measurement_unit: Faker::Food.metric_measurement, price: rand(1..27), quantity: rand(1..9), user_id: rand(1..9))
-  Food.create(name: Faker::Food.vegetables, measurement_unit: Faker::Food.metric_measurement, price: rand(1..27), quantity: rand(1..9), user_id: rand(1..9))
-end
-
-9.times do
-  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
-  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
-  Recipe.create(name: Faker::Food.dish, preparation_time: rand(1..90), cooking_time: rand(1..90), description: Faker::Food.description, public: true, user_id: rand(1..9))
-end
-
-9.times do
-  RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
-  RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
+81.times do
   RecipeFood.create(quantity: rand(1..18), recipe_id: rand(1..9), food_id: rand(1..9))
 end

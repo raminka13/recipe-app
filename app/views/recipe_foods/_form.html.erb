@@ -18,8 +18,10 @@
 
   <div>
     <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+    <%= collection_select(:recipe_food, :food_id, @user.foods.order( 'name ASC' ), :id, :name) %>
   </div>
+
+  <br>
 
   <div>
     <%= form.submit %>
