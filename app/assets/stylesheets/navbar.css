@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--color-5);
+  overflow: hidden;
 }
 
 #nav-container {
