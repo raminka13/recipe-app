@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
   subject do
-    User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+    User.create(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
   end
-  before { subject.save }
   before do
     @recipe = Recipe.create(name: 'apple pie', preparation_time: 10, cooking_time: 10, description: 'Tasty!',
                             public: true, user: subject)

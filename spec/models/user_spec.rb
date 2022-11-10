@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+    User.create(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
   end
-  before { subject.save }
 
   context 'Validations should be working' do
     it 'ALL validations should return true' do
