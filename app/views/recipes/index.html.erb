@@ -1,0 +1,17 @@
+<h1>Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+  <%= render recipe %>
+  <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
+  <% if can? :manage, recipe %>
+  <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
+  <% end %>
+  <br>
+<% end %>
+
+<% if can? :manage, @recipes.first %>
+  <%= link_to "New recipe", new_user_recipe_path %>
+<% end %>
+
+<%= link_to "Back to User", user_path(@user) %>
+

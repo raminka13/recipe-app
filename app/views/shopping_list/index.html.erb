@@ -1,0 +1,20 @@
+  	<p>Amount of food needed to buy: <%= @total_ingredients %> Ingredients</p>
+  	<p>Total value of food needed: $<%= @total_value %></p>
+
+	<table>
+		<tr>
+			<th>Food</th>
+    	<th>Quantity</th>
+    	<th>Price</th>
+  	</tr>
+  	<%@missing_foods.each do |ingred|%>
+  	<tr>
+    	<td><%=ingred.food.name%></td>
+    	<td><%= ingred.quantity - ingred.food.quantity %> <%= ingred.food.measurement_unit%></td>
+    	<td>$<%=ingred.food.price * (ingred.quantity - ingred.food.quantity) %></td>
+  	</tr>
+  	<%end%>
+	</table>
+
+    <%= link_to "Back", :back %>
+

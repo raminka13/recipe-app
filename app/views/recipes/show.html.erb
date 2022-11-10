@@ -1,0 +1,30 @@
+<%= render @recipe %>
+
+<% if can? :manage, @recipe %>
+  <%= form_with(model: [@user, @recipe]) do |form| %>
+    <%= form.hidden_field :public, value: !@recipe.public %>
+    <%= form.submit 'Public?' %>
+  <% end %>
+<% end %>
+
+<% if can? :manage, @recipe %>
+  <%= link_to "Generate List", user_recipe_shopping_list_index_path(@user, @recipe) %>
+  <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@user, @recipe) %>
+  <%= link_to "Edit this recipe", edit_user_recipe_path(@user, @recipe) %>
+  <%= button_to "Delete Recipe", user_recipe_path(@user, @recipe), method: :delete %>
+<% end %>
+
+  <table>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+      <%= render @recipe_foods %>
+  </table>
+
+
+<div>
+  <%= link_to "Back to recipes", user_recipes_path(@user) %>
+</div>

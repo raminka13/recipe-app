@@ -1,24 +1,45 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+# Ruby on Recipe App
+A great blog app created with RoR.
 
-Things you may want to cover:
+## Class diagram for the Database
+![](blog_app_erd.png)
 
-* Ruby version
+## Getting Started
+- Check the Ruby version or if you have at all by running `ruby -v` if you get something like this `ruby 2.6.8p205 (2021-07-07 revision 67951)` you have Ruby installed.
+- Clone the repository by runiing `git clone https://github.com/raminka13/recipe-app.git` in your CLI.
+- `cd recipe-app`
+- Run `bundle install`
+- Run `rails db:create db:migrate`
+- Run `rails server`
+- Open Browser `http://localhost:3000/`
 
-* System dependencies
+## Testing
+- Run `rspec spec/`
 
-* Configuration
+## Authors
+👤 **Raul A Ospina** 🧑🏻‍💻
+- GitHub: [@raminka13](https://github.com/raminka13)
+- Twitter: [@raminka13](https://twitter.com/raminka13)
+- LinkedIn: [Raul Ospina](http://linkedin.com/in/raul-ospina)
 
-* Database creation
+👤 **Vitor Guedes Madeira** 🧑🏻‍💻
+- GitHub: [@vitorguedesmadeira](https://github.com/VitorGuedesMadeira)
+- Twitter: [@CDahguedes](https://twitter.com/CDahguedes)
+- LinkedIn: [Vitor Guedes](https://www.linkedin.com/in/vitor-guedes-madeira/)
 
-* Database initialization
+## 🤝 Contributing
 
-* How to run the test suite
+Contributions, issues, and feature requests are welcome!
 
-* Services (job queues, cache servers, search engines, etc.)
+Feel free to check the [issues page](https://github.com/raminka13/recipe-app/issues).
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

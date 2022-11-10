@@ -1,0 +1,10 @@
+<%= render @food %>
+
+<div>
+<%= link_to "Back to foods", user_foods_path(@user) %>
+</div>
+
+<% if can? :manage, @food %>
+  <%= link_to "Edit this food", edit_user_food_path(@user, @food) %> |
+  <%= button_to "Destroy this food", user_food_path(@user, @food), method: :delete %>
+<% end %>

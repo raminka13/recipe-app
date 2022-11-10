@@ -1,0 +1,18 @@
+<h1>Foods</h1>
+
+<%= @user.name %><br>
+<% if can? :manage, @foods.first %>
+  <%= link_to "Add Food", new_user_food_path %>
+<% end %>
+
+<div id="foods">
+  <% @foods.each do |food| %>
+    <%= render food %>
+    <% if can? :manage, food %>
+      <%= link_to "Show this food", user_food_path(@user, food) %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "Back to User", user_path(@user) %>
+

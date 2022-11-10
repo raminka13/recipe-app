@@ -1,0 +1,13 @@
+<h1>New recipe food</h1>
+<% if can? :manage, @recipe %>
+  <%= render "form", recipe_food: @recipe_food %>
+<% else %>
+  What are you doing here? This is not your Ingredient ❌
+<% end %>
+
+
+<br>
+
+<div>
+  <%= link_to "Back to recipe foods", user_recipe_path(@user, @recipe) %>
+</div>
