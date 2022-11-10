@@ -2,9 +2,9 @@
 
 <h1>Foods</h1>
 
-<%= @user.name %>
 
 <div id="foods">
+  <%= @user.name %>
   <% @foods.each do |food| %>
     <%= render food %>
     <% if can? :manage, food %>

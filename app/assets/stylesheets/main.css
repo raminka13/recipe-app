@@ -11,12 +11,12 @@
 
 .notice,
 .alert {
-  width: 100%;
-  min-height: 0;
+  width: fit-content;
   max-height: 20%;
   background-color: #1b7b1b;
   color: white;
   text-align: center;
+  border-radius: 5px;
 }
 
 .alert {
