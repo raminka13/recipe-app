@@ -8,12 +8,12 @@
 <div id="foods">
   <% @foods.each do |food| %>
     <%= render food %>
-    <p>
+    <% if can? :manage, food %>
       <%= link_to "Show this food", user_food_path(@user, food) %>
-    </p>
+      <%= link_to "Add Food", new_user_food_path %> <br>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "Add Food", new_user_food_path %> <br>
 <%= link_to "Back to User", user_path(@user) %>
 
