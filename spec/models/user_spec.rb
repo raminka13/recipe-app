@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password') }
+  subject do
+    User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+  end
   before { subject.save }
 
   context 'Validations should be working' do
@@ -18,7 +20,7 @@ RSpec.describe User, type: :model do
       expect(subject.name).to satisfy { |n| n.length <= 27 }
     end
 
-    it 'Posts counter should return a number' do
+    it 'email should return a string' do
       expect(subject.email).to be_a_kind_of(String)
     end
   end

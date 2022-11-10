@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-  subject { User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password') }
+  subject do
+    User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+  end
   before { subject.save }
   before { @apple = Food.create(name: 'apple', measurement_unit: 'kg', price: 10, quantity: 10, user: subject) }
 

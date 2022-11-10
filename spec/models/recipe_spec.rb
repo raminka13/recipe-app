@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  subject { User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password') }
+  subject do
+    User.new(name: 'Pepe Frog', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+  end
   before { subject.save }
-  before { @recipe = Recipe.create(name: 'apple pie', preparation_time: 10, cooking_time: 10, description: 'Tasty!', public: true, user: subject) }
+  before do
+    @recipe = Recipe.create(name: 'apple pie', preparation_time: 10, cooking_time: 10, description: 'Tasty!',
+                            public: true, user: subject)
+  end
 
   context 'Validations should be working' do
     it 'ALL validations should return true' do
