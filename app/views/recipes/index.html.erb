@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Recipes</h1>
 
 <% @recipes.each do |recipe| %>
@@ -11,7 +9,7 @@
   <br>
 <% end %>
 
-<% if can? :manage, @recipe %>
+<% if can? :manage, @recipes.first %>
   <%= link_to "New recipe", new_user_recipe_path %>
 <% end %>
 

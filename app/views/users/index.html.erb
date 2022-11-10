@@ -1,9 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Users</h1>
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Open User", user_path(user) %>
+    </p>
+  <% end %>
+</div>
 
-<% @users.each do |user| %>
-  <%= render user %>
-<% end %>
-
-<%= link_to "Public Recipes", public_recipes_path %>

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -16,5 +14,4 @@ class Ability
     can :manage, Recipe, user: current_user
     # return unless current_user.role == 'admin' # additional permissions for administrators
   end
-
 end

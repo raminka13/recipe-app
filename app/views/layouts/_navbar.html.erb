@@ -19,9 +19,6 @@
           <%=link_to "My Foods", user_foods_path(current_user) %>
         </li>
         <li class="nav-item">
-          <%=link_to "Settings", edit_user_path(current_user) %>
-        </li>
-        <li class="nav-item">
           <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) %>
         </li>
         <li class="nav-item">
