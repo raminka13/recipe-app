@@ -1,11 +1,11 @@
 #navbar {
   width: 100%;
   height: 69px;
-  background-color: var(--fifth-color);
+  background-color: var(--color-3);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--third-color);
+  border-bottom: 1px solid var(--color-5);
 }
 
 #nav-container {
@@ -51,10 +51,10 @@
 }
 
 .logged-user {
-  color: var(--main-color);
-  background-color: var(--third-color);
+  color: var(--color-1);
+  background-color: var(--color-4);
   padding: 0.5rem 0.75rem;
-  border: 1px solid var(--fourth-color);
+  border: 1px solid var(--color-1);
   border-radius: 0.25rem;
   font-size: 14px;
   line-height: 14px;
@@ -63,7 +63,7 @@
 }
 
 .logged-user strong {
-  color: var(--main-color);
+  color: var(--color-1);
   font-size: 18px;
   font-weight: 500;
 }

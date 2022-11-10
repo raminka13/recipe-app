@@ -1,26 +1,5 @@
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  color: var(--fourth-color);
-}
-
-:root {
-  --main-color: #ebe3d9;
-  --second-color: #bf8e63;
-  --third-color: #986445;
-  --fourth-color: #1f0e04;
-  --fifth-color: #e4a37d;
-}
-
-body {
-  background: linear-gradient(var(--main-color), var(--third-color));
-}
-
 main {
+  background: linear-gradient(var(--color-1), var(--color-4));
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -30,11 +9,11 @@ main {
 
 .container {
   display: flex;
+  flex-direction: column;
   min-height: calc(100vh - 138px);
   justify-content: center;
-  align-items: flex-start;
-  width: 80%;
-  max-width: 900px;
+  align-items: center;
+  width: 100%;
   flex-wrap: wrap;
 }
 

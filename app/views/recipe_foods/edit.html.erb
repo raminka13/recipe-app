@@ -1,8 +1,10 @@
 <h1>Editing recipe food</h1>
 
-<%= render "form", recipe_food: @recipe_food %>
-
-<br>
+<% if can? :manage, @recipe %>
+  <%= render "form", recipe_food: @recipe_food %>
+<% else %>
+  What are you doing here? This is not your food :)
+<% end %>
 
 <div>
   <%= link_to "Back to recipe foods", user_recipe_path(@user, @recipe) %>

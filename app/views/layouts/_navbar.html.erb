@@ -19,11 +19,14 @@
           <%=link_to "My Foods", user_foods_path(current_user) %>
         </li>
         <li class="nav-item">
+          <%=link_to "Settings", edit_user_path(current_user) %>
+        </li>
+        <li class="nav-item">
           <%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }) %>
         </li>
         <li class="nav-item">
           <%= link_to edit_user_registration_path, class: 'nav-link' do %>
-          <p class="logged-user">Log as<br><strong><%= current_user.name.split(' ')[0] %></strong></p>
+          <p class="logged-user">Hello<br><strong><%= current_user.name.split(' ')[0] %></strong></p>
           <% end %>
         </li>
       <% else %>
