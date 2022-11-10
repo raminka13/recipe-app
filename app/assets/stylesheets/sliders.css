@@ -17,6 +17,7 @@
   transition: 0.5s;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 30px;
+  box-shadow: var(--box-shadow-1);
 }
 
 .test span {
