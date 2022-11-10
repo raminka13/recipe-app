@@ -23,7 +23,7 @@
         </li>
         <li class="nav-item">
           <%= link_to edit_user_registration_path, class: 'nav-link' do %>
-          <p class="logged-user">Log as<br><strong><%= current_user.name %></strong></p>
+          <p class="logged-user">Log as<br><strong><%= current_user.name.split(' ')[0] %></strong></p>
           <% end %>
         </li>
       <% else %>

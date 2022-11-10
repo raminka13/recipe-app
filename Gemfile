@@ -21,6 +21,9 @@ gem 'dotenv-rails'
 # Devise authentication
 gem 'devise'
 
+# Authorization cancancan
+gem 'cancancan'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
