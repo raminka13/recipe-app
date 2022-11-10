@@ -1,0 +1,29 @@
+.test {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 150px;
+  left: -125px;
+  gap: 5px;
+}
+
+.test a {
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  width: 175px;
+  padding: 20px;
+  background-color: var(--color-5);
+  transition: 0.5s;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 30px;
+}
+
+.test span {
+  color: white;
+}
+
+.test a:hover {
+  z-index: 1;
+  width: 300px;
+}
