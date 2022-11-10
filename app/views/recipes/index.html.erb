@@ -1,17 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Recipes</h1>
 
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
-    </p>
-    <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
+<% @recipes.each do |recipe| %>
+  <%= render recipe %>
+  <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
+  <% if can? :manage, recipe %>
+  <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
   <% end %>
-</div>
+  <br>
+<% end %>
 
-<%= link_to "New recipe", new_user_recipe_path %>
+<% if can? :manage, @recipes.first %>
+  <%= link_to "New recipe", new_user_recipe_path %>
+<% end %>
+
 <%= link_to "Back to User", user_path(@user) %>
 

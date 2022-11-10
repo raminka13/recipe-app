@@ -2,6 +2,13 @@
   <td><%= recipe_food.food.name %></td>
   <td><%= recipe_food.quantity %></td>
   <td><%= recipe_food.food.price %></td>
-  <td><%= link_to "Modify", edit_user_recipe_recipe_food_path(@user, @recipe, recipe_food) %>
-  <%= button_to "Remove", user_recipe_recipe_food_path(@user, @recipe, recipe_food), method: :delete %></td>
+  <td>
+  <% if can? :manage, @recipe %>
+  <%= link_to "Modify", edit_user_recipe_recipe_food_path(@user, @recipe, recipe_food) %>
+  <%= button_to "Remove", user_recipe_recipe_food_path(@user, @recipe, recipe_food), method: :delete %>
+<% else %>
+  No action
+<% end %>
+
+  </td>
 </tr>

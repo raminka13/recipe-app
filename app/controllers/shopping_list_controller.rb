@@ -1,8 +1,8 @@
 class ShoppingListController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = current_user
     @recipe = Recipe.find(params[:recipe_id])
-    @recipe_foods = @recipe.recipe_foods
+    @recipe_foods = @recipe.recipe_foods.includes([:food])
     @total_value = 0
     @total_ingredients = 0
     @missing_foods = []

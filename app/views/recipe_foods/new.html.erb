@@ -1,6 +1,10 @@
 <h1>New recipe food</h1>
+<% if can? :manage, @recipe %>
+  <%= render "form", recipe_food: @recipe_food %>
+<% else %>
+  What are you doing here? This is not your Ingredient ❌
+<% end %>
 
-<%= render "form", recipe_food: @recipe_food %>
 
 <br>
 

@@ -4,7 +4,6 @@
   <% @public_recipes.each do |recipe| %>
     <%= render recipe %>
     <%= link_to "Open Recipe", user_recipe_path(recipe.user, recipe) %>
-    <br>
+    <br><br>
   <% end %>
-  
 </div>

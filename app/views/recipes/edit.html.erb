@@ -1,6 +1,10 @@
 <h1>Editing recipe</h1>
+<% if can? :manage, @recipe %>
+  <%= render "form", recipe: @recipe %>
+<% else %>
+  What are you doing here? This is not your recipe ‼️
+<% end %>
 
-<%= render "form", recipe: @recipe %>
 
 <br>
 
