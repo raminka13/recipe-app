@@ -1,7 +1,7 @@
 <h1>Foods</h1>
 
 <%= @user.name %><br>
-<% if can? :manage, @foods.first %>
+<% if can? :manage, @user.foods.first %>
   <%= link_to "Add Food", new_user_food_path %>
 <% end %>
 
