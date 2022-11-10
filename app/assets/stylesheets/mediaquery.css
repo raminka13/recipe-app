@@ -1,5 +1,6 @@
 @media all and (max-width: 786px) {
-  #nav-container {
+  #navbar-body {
     background-color: red;
+    opacity: 0;
   }
 }
