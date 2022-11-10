@@ -2,9 +2,10 @@
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+<%= link_to "Edit user", edit_user_path(@user) %>
 
-  <%= button_to "Delete User", @user, method: :delete %>
-</div>
+<%= link_to "Back to users", users_path %>
+
+<%= button_to "Delete User", @user, method: :delete %>
+
+<%= link_to "Public Recipes", public_recipes_path %>

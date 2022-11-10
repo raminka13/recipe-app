@@ -1,14 +1,16 @@
 <div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %> <br>
-    <strong>ID:</strong>
-    <%= user.id %> <br>
-    <strong>Foods:</strong>
-    <%= user.foods.count %>.
-  </p>
+  <strong>Name:</strong>
+  <%= user.name %> <br>
+
+  <strong>ID:</strong>
+  <%= user.id %> <br>
+  
+  <strong>Foods:</strong>
+  <%= user.foods.count %>.
+
+  <br>
 
   <%= link_to 'Foods', user_foods_path(user) %>
   <%= link_to 'Recipes', user_recipes_path(user) %>
-
 </div>
+<br>

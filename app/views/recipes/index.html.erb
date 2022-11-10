@@ -2,15 +2,14 @@
 
 <h1>Recipes</h1>
 
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
-    <% if can? :manage, recipe %>
-    <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
-    <% end %>
+<% @recipes.each do |recipe| %>
+  <%= render recipe %>
+  <%= link_to "Open Recipe", user_recipe_path(@user, recipe) %>
+  <% if can? :manage, recipe %>
+  <%= button_to "Remove", user_recipe_path(@user, recipe), method: :delete %>
   <% end %>
-</div>
+  <br>
+<% end %>
 
 <% if can? :manage, @recipe %>
   <%= link_to "New recipe", new_user_recipe_path %>

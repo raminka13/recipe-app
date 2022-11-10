@@ -1,13 +1,5 @@
-main {
-  background: linear-gradient(var(--color-1), var(--color-4));
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .container {
+  background: linear-gradient(var(--color-1), var(--color-4));
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 138px);
@@ -29,12 +21,4 @@ main {
 
 .alert {
   background-color: #b00707;
-}
-
-.users-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
 }
