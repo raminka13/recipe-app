@@ -24,6 +24,10 @@
   color: white;
 }
 
+.test2 img {
+  height: 36px;
+}
+
 .test a:hover {
   z-index: 1;
   width: 300px;

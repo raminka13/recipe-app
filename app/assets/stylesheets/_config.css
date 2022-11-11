@@ -10,14 +10,16 @@
 
 :root {
   /* colors */
-  --color-1: #ebe3d9;
-  --color-2: #e4a37d;
-  --color-3: #bf8e63;
-  --color-4: #986445;
-  --color-5: #1f0e04;
+  --color-5: #0e2c23;
+  --color-3: #F28705;
+  --color-1: #D96704;
+  --color-2: #c25730;
+  --color-4: #b98034;
 
   /* colors */
   --box-shadow-1: 3px 3px 10px rgba(0, 0, 0, 0.4);
   --box-shadow-2: 5px 5px 15px rgba(0, 0, 0, 0.4);
   --box-shadow-3: 10px 10px 25px rgba(0, 0, 0, 0.4);
 }
+
+
