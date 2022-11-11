@@ -1,0 +1,27 @@
+.button-1 {
+  background-color: var(--color-4);
+  color: var(--color-1);
+  padding: 2px 20px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+.button-1:hover {
+  background-color: var(--color-3);
+  color: var(--color-5);
+}
+
+.button-2 {
+  background-color: var(--color-5);
+  color: var(--color-1);
+  padding: 1px 10px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.button-2:hover {
+  background-color: var(--color-3);
+  color: var(--color-5);
+}

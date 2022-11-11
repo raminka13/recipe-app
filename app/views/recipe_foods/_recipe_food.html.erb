@@ -4,8 +4,8 @@
   <td><%= recipe_food.food.price %></td>
   <td>
   <% if can? :manage, @recipe %>
-  <%= link_to "Modify", edit_user_recipe_recipe_food_path(@user, @recipe, recipe_food) %>
-  <%= button_to "Remove", user_recipe_recipe_food_path(@user, @recipe, recipe_food), method: :delete %>
+  <%= link_to "Modify", edit_user_recipe_recipe_food_path(@user, @recipe, recipe_food), class: 'button-2' %>
+  <%= button_to "Remove", user_recipe_recipe_food_path(@user, @recipe, recipe_food), method: :delete, class: 'button-2' %>
 <% else %>
   No action
 <% end %>

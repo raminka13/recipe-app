@@ -1,11 +1,14 @@
-<h1>Users</h1>
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Open User", user_path(user) %>
-    </p>
-  <% end %>
-  <%= link_to "Public Recipes", public_recipes_path %>
-</div>
+<section id="users-index-container">
+  <div>
+    <div id="users">
+      <h1>Users</h1>
+      <div id="users-scroll">
+        <% @users.each do |user| %>
+          <%= render user %>
+        <% end %>
+      </div>
+      <%= link_to "Public Recipes", public_recipes_path %>
+    </div>
+  </div>
+</section>
 

@@ -1,16 +1,19 @@
-<div id="<%= dom_id user %>">
-  <strong>Name:</strong>
-  <%= user.name %> <br>
-
-  <strong>ID:</strong>
-  <%= user.id %> <br>
-  
-  <strong>Foods:</strong>
-  <%= user.foods.count %>.
-
-  <br>
-
-  <%= link_to 'Foods', user_foods_path(user) %>
-  <%= link_to 'Recipes', user_recipes_path(user) %>
-</div>
-<br>
+<div id="user">
+  <img src="https://picsum.photos/200" alt="user-image">
+  <div id="user-info">
+    <div>
+      <strong>Name:</strong>
+      <%= user.name %> <br>
+    
+      <strong>Foods:</strong>
+      <%= user.foods.count %> |
+      <strong>Recipes:</strong>
+      <%= user.recipes.count %>
+    </div>
+    <div>
+      <%= link_to 'Foods', user_foods_path(user), class: 'button-1' %>
+      <%= link_to 'Recipes', user_recipes_path(user), class: 'button-1' %>
+    </div>
+    <%= link_to "Open User", user_path(user), class: 'button-2' %>
+    </div>
+  </div>

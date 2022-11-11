@@ -5,6 +5,7 @@
   top: 150px;
   left: -125px;
   gap: 5px;
+  z-index: 1;
 }
 
 .test a {
@@ -18,6 +19,7 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 30px;
   box-shadow: var(--box-shadow-1);
+  z-index: 1;
 }
 
 .test span {
