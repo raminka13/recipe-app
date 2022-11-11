@@ -1,10 +1,10 @@
-#users-index-container {
+#recipes-index-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-#users {
+#recipes {
   background-color: rgb(255, 255, 255, 0.7);
   width: 500px;
   box-shadow: var(--box-shadow-1);

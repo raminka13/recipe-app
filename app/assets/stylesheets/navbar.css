@@ -29,6 +29,7 @@
 .nav-logo img {
   height: 50px;
   width: auto;
+  transform: rotate(-10deg);
 }
 
 .nav-list {

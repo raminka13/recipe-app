@@ -3,30 +3,37 @@
   display: flex;
   flex-direction: column;
   top: 150px;
-  left: -125px;
+  left: -110px;
   gap: 5px;
   z-index: 1;
 }
 
 .test a {
   display: flex;
-  gap: 50px;
+  gap: 20px;
   justify-content: end;
   width: 175px;
   padding: 20px;
   background-color: var(--color-5);
-  transition: 0.5s;
+  transition: all 90ms ease-in;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 30px;
   box-shadow: var(--box-shadow-1);
+  filter: saturate(0.6);
   z-index: 1;
 }
 
 .test span {
   color: white;
+  text-align: right;
 }
 
 .test a:hover {
   z-index: 1;
   width: 300px;
+  filter: saturate(2);
+}
+
+.test2 img {
+  height: 36px;
 }

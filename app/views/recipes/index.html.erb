@@ -1,13 +1,18 @@
-<h1>Recipes</h1>
-
-<% if can? :manage, @recipes.first %>
-  <%= link_to "Add Recipe", new_user_recipe_path, class: 'button-1' %>
-<% end %>
-
-<% @recipes.each do |recipe| %>
-  <%= render recipe %>
-  <%= link_to "Open Recipe", user_recipe_path(@user, recipe), class: 'button-2' %>
-<% end %>
-
-<%= link_to "Back to User", user_path(@user), class: 'button-2' %>
+<section id="recipes-index-container">
+  <div>
+    <h1>Recipes</h1>
+    <% if can? :manage, @recipes.first %>
+      <%= link_to "Add Recipe", new_user_recipe_path, class: 'button-1' %>
+    <% end %>
+    <div id="recipes">
+      <div class="scroll">
+        <% @recipes.each do |recipe| %>
+          <%= render recipe %>
+          <%= link_to "Open Recipe", user_recipe_path(@user, recipe), class: 'button-2' %>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to "Back to User", user_path(@user), class: 'button-2' %>
+  </div>
+</section>
 
