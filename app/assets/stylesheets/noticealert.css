@@ -1,0 +1,13 @@
+.notice,
+.alert {
+  width: fit-content;
+  max-height: 20%;
+  background-color: #1b7b1b;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.alert {
+  background-color: #b00707;
+}
